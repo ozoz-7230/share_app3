@@ -1,0 +1,200 @@
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+
+    .m-#{$space} {
+
+        margin: #{$space}px !important;
+    }
+    .p-#{$space} {
+        padding: #{$space}px !important;
+    }
+
+    .h-#{$space} {
+        margin-top: #{$space}px !important;
+        margin-bottom: #{$space}px !important;
+    }
+    
+    .f-#{$space} {
+        font-size: #{$space}px !important;
+    }
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.small-title {
+  font-size: 10px;
+}
+
+.star-review {
+  color: #ffbf00;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// ドロップゾーン用
+.dropzone {
+  border: 2px dashed #0087F7 !important;
+  border-radius: 5px;
+  background: white;
+}
+
+.dropzone .dz-message {
+  font-weight: 400;
+}
+
+.dropzone .dz-message .note {
+  font-size: 0.8em;
+  font-weight: 200;
+  display: block;
+  margin-top: 1.4rem;
+}
+
+//フォーム
+.form-container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+//ページネーション
+.pagination-link.is-current {
+  background-color: #ee7979 !important;
+  border-color: #ee7979 !important;
+}
+
+//ホームページ用
+.has-bg-img {
+  background: url('background01.jpg') center center;
+  background-size: cover;
+
+}
+//アバター　オンライン
+.avatar {
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid white;
+  }
+
+  &.online:before {
+    background-color: #1dbf73;
+
+  }
+  &.offline:before {
+    background-color: gray;
+  }
+}
+
+//ナビバーのアバター画像位置
+.image {
+  //margin-top: 0.6rem;
+  display: flex; /* flexに */
+  align-items: center;
+}
+
+//メッセージ
+.conversation-message {
+  margin-bottom: 5px !important;
+  padding: 10px !important;
+  font-size: 15px;
+}
+
+// 部屋の表示
+.amenities li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.amenities .text-line-through {
+    text-decoration: line-through;
+    color: rgba(0,0,0,0.45);
+    font-size: 14px;
+}
+
+// 予約
+.reservation-table td {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dce0e0;
+    padding: 10px;
+}
+
+.reservation-table .total td {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+
+.form-control.datepicker {
+    color: #00A699;
+    background-color: white;
+    border: 1px solid #00A699;
+    text-align: center;
+
+}
+.message-alert {
+    color: #d43242;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+// 検索
+#main {
+    height: 100%;
+    overflow: hidden;
+
+}
+#left {
+    padding: 10px 400px 10px 20px;
+    overflow: scroll;
+    height: 100%;
+}
+
+#right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+
+}
+.map_price {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00A699;
+}
+
+//通知用数字
+.badge {
+  background-color: #fad4d4;
+  position: relative;
+  top: -15px;
+  left: -15px;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.icon-babu {
+  color:#14cfe7;
+}
